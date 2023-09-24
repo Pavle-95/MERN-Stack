@@ -9,7 +9,7 @@ const { default: mongoose } = require('mongoose');
 const app = express();
 
 // Middleware
-// app.use(express.json());
+app.use(express.json());
 app.use((req, res, next) => {
   console.log(req.path, res.method);
   next();
